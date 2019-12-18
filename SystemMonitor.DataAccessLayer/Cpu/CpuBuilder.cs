@@ -8,7 +8,7 @@ namespace SystemMonitor.DataAccessLayer.Cpu
     {
         private CpuInfo CpuInfo { get; set; }
         private PerformanceCounter CpuPerformanceCounter { get; set; }
-        private PerformanceCounter RamPerformanceCounter { get; set; }
+      
         private uint CurrentSpeed;
         private uint MaxSpeed;
 
@@ -16,7 +16,6 @@ namespace SystemMonitor.DataAccessLayer.Cpu
         {
             CpuInfo = new CpuInfo();
             CpuPerformanceCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
-            RamPerformanceCounter = new PerformanceCounter("Memory", "Available MBytes");
         }
 
         public Models.Cpu Get()

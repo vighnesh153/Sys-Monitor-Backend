@@ -2,14 +2,14 @@
 {
     public class Memory
     {
-        public float Total { get; set; }
-        public float InUse { get; set; }
-        public float Available 
+        public float TotalInBytes
         {
-            get 
+            get
             {
-                return Total - InUse;
+                return AvailableInBytes + InUseInBytes;
             }
         }
+        public float InUseInBytes { get; set; }
+        public float AvailableInBytes { get; set; }
     }
 }
