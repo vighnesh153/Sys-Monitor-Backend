@@ -13,7 +13,7 @@
 
             wifi.NetworkName = WifiInfo.OtherProperties("SSID");
 
-            wifi.SignalStrength = float.Parse(WifiInfo.OtherProperties("Signal"));
+            wifi.SignalStrength = float.Parse(WifiInfo.OtherProperties("Signal").Replace("%", ""));
             wifi.ConnectionType = WifiInfo.OtherProperties("Radio type");
 
             wifi.IPv4_Address = WifiInfo.GetIPv4Address();

@@ -76,7 +76,7 @@ namespace SystemMonitor.DataAccessLayer.Wifi
             foreach (var keyAndValue in output)
             {
                 var keyValue = keyAndValue.ToList();
-                _wirelessNetworkProperties[keyValue[0]] = _wirelessNetworkProperties[keyValue[1]];
+                _wirelessNetworkProperties[keyValue[0]] = keyValue[1];
             }
         }
     }
