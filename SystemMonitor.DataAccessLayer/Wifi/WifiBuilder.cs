@@ -2,15 +2,10 @@
 {
     public class WifiBuilder
     {
-        private WifiInfo wifiInfo;
-        public WifiBuilder()
-        {
-            wifiInfo = new WifiInfo();
-        }
-
-        public Models.Wifi Get()
+        public static Models.Wifi Get()
         {
             var wifi = new Models.Wifi();
+            WifiInfo.UpdateOtherProperties();
 
             wifi.Name = WifiInfo.GetWirelessInstanceName();
             wifi.ReceiveSpeedInKBPS = ((float)WifiInfo.Get("Bytes Received/sec")) / 1024;

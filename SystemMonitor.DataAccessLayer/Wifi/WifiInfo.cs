@@ -49,11 +49,10 @@ namespace SystemMonitor.DataAccessLayer.Wifi
 
         public static string OtherProperties(string key)
         {
-            UpdateOtherProperties();
             return _wirelessNetworkProperties[key];
         }
 
-        private static void UpdateOtherProperties()
+        public static void UpdateOtherProperties()
         {
             var process = new Process();
             process.StartInfo.FileName = "netsh.exe";
