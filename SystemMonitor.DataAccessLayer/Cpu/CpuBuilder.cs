@@ -7,7 +7,6 @@ namespace SystemMonitor.DataAccessLayer.Cpu
     public class CpuBuilder
     {
         private CpuInfo CpuInfo { get; set; }
-        private PerformanceCounter CpuPerformanceCounter { get; set; }
       
         private uint CurrentSpeed;
         private uint MaxSpeed;
@@ -15,7 +14,6 @@ namespace SystemMonitor.DataAccessLayer.Cpu
         public CpuBuilder()
         {
             CpuInfo = new CpuInfo();
-            CpuPerformanceCounter = new PerformanceCounter("Processor Information", "% Processor Time", "_Total");
         }
 
         public Models.Cpu Get()
@@ -25,9 +23,9 @@ namespace SystemMonitor.DataAccessLayer.Cpu
 
             cpu.Name = CpuInfo.Get("Name") as string;
             cpu.Utilization = GetCpuUsage();
-            cpu.SpeedInGHz = CurrentSpeed / 1024;
+            cpu.SpeedInGHz = (float)CurrentSpeed / 1024;
             cpu.NumberOfProcesses = Process.GetProcesses().Length;
-            cpu.BaseSpeedInGHz = MaxSpeed / 1024;
+            cpu.BaseSpeedInGHz = (float)MaxSpeed / 1024;
             cpu.NumberOfCores = int.Parse($"{CpuInfo.Get("NumberOfCores")}");
             cpu.NumberOfLogicalProcessors = Environment.ProcessorCount;
             cpu.L1CacheInKB = (int)(CpuCache.GetCacheSizes(CacheLevel.Level1));
