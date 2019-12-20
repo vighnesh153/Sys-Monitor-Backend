@@ -2,7 +2,7 @@
 {
     public class WifiBuilder
     {
-        public static Models.Wifi Get()
+        public Models.Wifi Get()
         {
             var wifi = new Models.Wifi();
             WifiInfo.UpdateOtherProperties();
