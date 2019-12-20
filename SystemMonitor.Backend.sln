@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemMonitor.Models", "Sys
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemMonitor.DataAccessLayer", "SystemMonitor.DataAccessLayer\SystemMonitor.DataAccessLayer.csproj", "{E382B183-7586-4FA7-A9C0-5D0BB2FEA382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemMonitor.ServiceLayer", "SystemMonitor.ServiceLayer\SystemMonitor.ServiceLayer.csproj", "{193C1FF3-0D41-4257-B2F2-B9AA99367BF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemMonitor.ServiceLayer", "SystemMonitor.ServiceLayer\SystemMonitor.ServiceLayer.csproj", "{193C1FF3-0D41-4257-B2F2-B9AA99367BF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemMonitor.WorkerService", "SystemMonitor.WorkerService\SystemMonitor.WorkerService.csproj", "{D6C92E0E-57EE-4794-BC2F-A1644EC33E9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{193C1FF3-0D41-4257-B2F2-B9AA99367BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{193C1FF3-0D41-4257-B2F2-B9AA99367BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{193C1FF3-0D41-4257-B2F2-B9AA99367BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C92E0E-57EE-4794-BC2F-A1644EC33E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C92E0E-57EE-4794-BC2F-A1644EC33E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C92E0E-57EE-4794-BC2F-A1644EC33E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C92E0E-57EE-4794-BC2F-A1644EC33E9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

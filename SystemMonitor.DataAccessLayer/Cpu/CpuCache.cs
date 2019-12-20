@@ -1,6 +1,7 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections.Generic;
-using System.Text;
+
+using System.Management;
 
 namespace SystemMonitor.DataAccessLayer.Cpu
 {

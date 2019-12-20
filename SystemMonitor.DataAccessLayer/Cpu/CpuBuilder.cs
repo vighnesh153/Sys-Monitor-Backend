@@ -7,7 +7,7 @@ namespace SystemMonitor.DataAccessLayer.Cpu
     public class CpuBuilder
     {
         private CpuInfo CpuInfo { get; set; }
-      
+
         private uint CurrentSpeed;
         private uint MaxSpeed;
 
@@ -31,7 +31,7 @@ namespace SystemMonitor.DataAccessLayer.Cpu
             cpu.L1CacheInKB = (int)(CpuCache.GetCacheSizes(CacheLevel.Level1));
             cpu.L2CacheInKB = (int)(CpuCache.GetCacheSizes(CacheLevel.Level2));
             cpu.L3CacheInKB = (int)(CpuCache.GetCacheSizes(CacheLevel.Level3));
-            
+
             return cpu;
         }
 
