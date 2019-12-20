@@ -23,6 +23,7 @@ namespace SystemMonitor.WorkerService
                 .CreateLogger();
 
             return Host.CreateDefaultBuilder(args)
+                .UseWindowsService()
                 .ConfigureLogging(logging =>
                 {
                     logging.AddSerilog();

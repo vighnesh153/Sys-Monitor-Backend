@@ -26,6 +26,7 @@ namespace SystemMonitor.WorkerService
 
             while (!stoppingToken.IsCancellationRequested)
             {
+                System.Console.WriteLine($"Base Url: {baseUrl}");
                 await new Transmitter(
                     baseUrl, options.CpuRoute, options.MemoryRoute, options.WifiRoute
                 ).Transmit();
